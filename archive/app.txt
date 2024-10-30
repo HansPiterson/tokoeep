@@ -8,9 +8,36 @@ import PurchasePage from './Pages/PurchasePage';
 const App =() => {
   return (    
     <Router>
-      <div className="App">
-      <Navbar />
+      <div className="App">     
       <div className="product-section">
+        <ProductCard 
+          name="Product 1"
+          description="Description for Product 1"
+          price="$10.00"
+        />
+        <ProductCard 
+          name="Product 2"
+          description="Description for Product 2"
+          price="$15.00"
+        />
+      </div>
+      <Navbar />
+      
+      <Routes>
+        <Route path='/PurchasePage' element={<PurchasePage/>} />
+        {/* <Route path='/' element={<ProductCard/>} /> */}
+        
+          
+      </Routes>
+      </div>
+    </Router>
+  )
+}
+
+export default App;
+
+
+<div className="product-section">
         <ProductCard 
           name="Diamond Lock"
           price="Rp.5,000"
@@ -25,16 +52,3 @@ const App =() => {
           button="Beli"
         />
       </div>
-      
-      <Routes>
-        <Route path='/PurchasePage' element={<PurchasePage/>} />
-        {/* <Route path='/' element={<ProductCard/>} /> */}
-        
-          
-      </Routes>
-      </div>
-    </Router>
-  )
-}
-
-export default App;
